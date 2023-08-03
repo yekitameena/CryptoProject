@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.ui.MainActivity">
+
+    <TextView
+        android:id="@+id/topHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Search crypto"
+        android:padding="16dp"
+        android:textStyle="bold"
+        android:gravity="left"
+        android:background="#202A44"
+        app:layout_constraintBottom_toTopOf="@+id/name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/search_layout_inside"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/topHeader">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="2dp">
+
+            <ImageView
+                android:id="@+id/search_icon"
+                android:layout_width="32dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="4dp"
+                android:padding="4dp"
+                android:src="@drawable/ic_search_icon"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/light_grey" />
+
+            <ImageView
+                android:id="@+id/clear_search"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginEnd="4dp"
+                android:padding="8dp"
+                android:src="@drawable/ic_cross"
+                app:tint="@color/light_grey"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/search_text"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="32dp"
+                android:textColorHint="@color/light_grey"
+                app:hintEnabled="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/clear_search"
+                app:layout_constraintStart_toEndOf="@+id/search_icon"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/searchEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="4dp"
+                    android:background="@color/white"
+                    android:hint="Search crypto"
+                    android:imeOptions="actionSearch"
+                    android:inputType="text"
+                    android:lines="1"
+                    android:padding="0dp"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/black"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintBottom_toBottomOf="@+id/topHeader"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/number"
+        android:layout_width="44dp"
+        android:layout_height="wrap_content"
+        android:text="#"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:paddingStart="8dp"
+        android:paddingEnd="2dp"
+        android:textStyle="bold"
+        android:background="#252525"
+        android:textColor="@android:color/darker_gray"
+        app:layout_constraintBottom_toTopOf="@+id/tournamentRecyclerview"
+        app:layout_constraintEnd_toStartOf="@+id/name"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:textStyle="bold"
+        android:background="#252525"
+        android:textColor="@android:color/darker_gray"
+        app:layout_constraintTop_toTopOf="@+id/price"
+        app:layout_constraintEnd_toStartOf="@+id/updatedValue"
+        app:layout_constraintStart_toEndOf="@+id/number"/>
+
+<!--    <TextView-->
+<!--        android:id="@+id/name"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="# Name"-->
+<!--        android:padding="16dp"-->
+<!--        android:textStyle="bold"-->
+
+<!--        app:layout_constraintBottom_toTopOf="@+id/tournamentRecyclerview"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/updatedValue"-->
+<!--        app:layout_constraintStart_toStartOf="parent" />-->
+
+    <TextView
+        android:id="@+id/updatedValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="24 h"
+        android:padding="16dp"
+        android:textStyle="bold"
+        android:background="#252525"
+        android:textColor="@android:color/darker_gray"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/tournamentRecyclerview"
+        app:layout_constraintEnd_toStartOf="@+id/price"
+        app:layout_constraintStart_toEndOf="@+id/name" />
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="price"
+        android:padding="16dp"
+        android:textStyle="bold"
+        android:background="#252525"
+        android:textColor="@android:color/darker_gray"
+        android:gravity="right"
+        app:layout_constraintBottom_toTopOf="@+id/tournamentRecyclerview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/updatedValue" />
+
+    <View
+        android:id="@+id/listDivider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintBottom_toBottomOf="@+id/price"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/tournamentRecyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="16dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintTop_toBottomOf="@+id/name"
+        tools:listitem="@layout/crypto_item_view" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

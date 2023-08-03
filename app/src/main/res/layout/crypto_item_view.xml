@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#252525"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+<!--    <ImageView-->
+<!--        android:id="@+id/playerIcon"-->
+<!--        android:layout_width="44dp"-->
+<!--        android:layout_height="44dp"-->
+<!--        android:layout_margin="16dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/playerName"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/playerName"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Player1"-->
+<!--        android:layout_margin="16dp"-->
+<!--        android:padding="4dp"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/playerIcon"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/playerPoints"-->
+<!--        />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/playerPoints"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="12"-->
+<!--        android:layout_margin="16dp"-->
+<!--        android:padding="4dp"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/playerName"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        />-->
+
+
+    <TextView
+        android:id="@+id/number"
+        android:layout_width="44dp"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:paddingStart="8dp"
+        android:paddingEnd="2dp"
+        android:textStyle="bold"
+        android:textColor="@color/light_grey"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/name"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Bitcoin"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/updatedValue"
+        app:layout_constraintStart_toEndOf="@+id/number" />
+
+    <TextView
+        android:id="@+id/updatedValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="+1%"
+        android:padding="16dp"
+        android:textStyle="bold"
+        android:textColor="#00E600"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/price"
+        app:layout_constraintStart_toEndOf="@+id/name" />
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="$400"
+        android:padding="16dp"
+        android:textStyle="bold"
+        android:textColor="#00E600"
+        android:gravity="right"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/updatedValue" />
+
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/light_grey"
+        app:layout_constraintTop_toBottomOf="@+id/price"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
